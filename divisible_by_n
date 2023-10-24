@@ -1,0 +1,20 @@
+function isDivisbleByN(arr, n) {
+    const result = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] % n === 0) {
+        result.push(arr[i]);
+      }
+    }
+    
+    if (result.length > 0) {
+      return result;
+    } else {
+      return 0;
+    }
+  }
+  
+  // Test cases
+  console.log(isDivisbleByN([1, 3, 5, 6, 3, 6, 7, 4], 2)); // [6, 4]
+  console.log(isDivisbleByN([21, 3, 5, 6, 3, 6, 7, 4], 7)); // [21, 7]
+  console.log(isDivisbleByN([1, 5, 1, 7], 4)); // 0
+  
