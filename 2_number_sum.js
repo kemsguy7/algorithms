@@ -12,6 +12,8 @@ function twoNumberSum(array, targetSum) {
     return [];
 }
 
+
+//this solution is not efficient 
 function twoNumberSum(array, targetSum) {
     for (let i = 0; i < array.length - 1; i++) {
         const num1 = array[i];
@@ -38,8 +40,8 @@ you cant add a single integer to itself in order to obtain the target sum
 you can assume that there will be at most one pair of numbers summing up to the target sum
 */
 
+/*
 function twoNumberSum(array, targetSum) {
-
     let left = 0; 
     let right = array.length - 1;
     while(left < right) {
@@ -55,4 +57,4 @@ function twoNumberSum(array, targetSum) {
     return[]
 }
 
-
+*/

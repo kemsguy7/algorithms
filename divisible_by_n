@@ -18,3 +18,5 @@ function isDivisbleByN(arr, n) {
   console.log(isDivisbleByN([21, 3, 5, 6, 3, 6, 7, 4], 7)); // [21, 7]
   console.log(isDivisbleByN([1, 5, 1, 7], 4)); // 0
   
+
+  //given an array of integers 1 to 9. 
