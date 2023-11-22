@@ -8,7 +8,6 @@ e.g isPrime(5) = true (1*5 or 5 * 1)
 isPrime(4) = false (1 * 4 or 2 * 2 or 4 *1)
 */
 
-
 function isPrime(n) {
 
     if (n < 2) {
@@ -23,7 +22,8 @@ function isPrime(n) {
     return true;  //else return true if the number 
 }
 
-
 console.log(isPrime(6));
 console.log(isPrime(5));
 console.log(isPrime(3));
+
+

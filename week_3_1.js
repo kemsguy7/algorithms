@@ -31,7 +31,6 @@
 
 //MR BOND'S SOLUTIONS
 
-
 function getMiddle(word:string): string {
     const maxIndex = word.length - 1;
 
