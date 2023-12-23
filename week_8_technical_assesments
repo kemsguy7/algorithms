@@ -1,0 +1,92 @@
+1.
+Using raw SQL queries, write the command to;
+a.) Create a database called Shop. ( 5 points)
+b.) Select a column named "FirstName" from a table named "Persons"? ( 5 points)
+c.) Select all the records from a table named "Persons" where the value of the column "FirstName" is "Peter"? ( 5 points)
+d.) Clear all data from table "Persons" while maintaining the table structure( 5 points)
+
+a.) CREATE DATABASE shop;
+
+b.) SELECT FirstName FROM Persons;
+
+c.) SELECT * FROM Persons WHERE FirstName = Peter;
+
+d) TRUNCATE TABLE Persons;
+
+2.
+(a) What is an ORM, mention any 3 ORMs you know (5 points)
+
+(c) What does ACID mean? (5 points)
+
+A) OBJECT RELATIONAL MAPPER is a set of predefiend tools that encapulates raw database SQL queries and maps them to a particular programming language, these tools solve the challenge of developers writing raw SQL queries and save a lot of development time.
+
+b)
+EXAMPLES OF ORM
+
+Sequelize
+Laravel ORM
+DJANGO ORM
+c) ACID (Atomicity, Consistency, Isolcation and Durability): These properties guaranty that database transactions are processes reliably in a consistent and predictable manner
+
+3.
+Given that we have a Table called Products with fields Id, Name, Price and Quantity, write SQL queries for each of the following .
+
+(i) Get all Products (3 marks)
+(ii) Get the Product with an Id of 878 (3 marks)
+(iii) Get all the Products in descending order of Price (3 marks)
+(iv) Get all the Products where the Name has 'bag' in it and the Price is between 50000 and 100000 (3 marks)
+(v) Get the total of all the Prices in the Products Table (3 marks)
+
+i) SELECT * FROM Products;
+
+ii) SELECT * FROM Products WHERE Id = 878;
+
+iii) SELECT * FROM Products ORDER BY Price DESC;
+
+iv) SELECT * FROM Products WHERE Name = 'bag' AND PRICE BETWEEN 50000 <= 100000;
+
+v) SELECT SUM(Price) FROM Products;
+
+4.
+a.) What do you understand by database? (5point)
+
+b.) List 5 advantages of using a database. (5point)
+
+A database is an organized collection of data in rows and columns.
+
+b)  5 ADVANTAGES OF USING DATABASES
+1. Faster
+2. Scalable
+3. More secure
+4. Allows relationships which is not a feature of csv files
+5. More reliable than other digital methods of storing data
+5.
+(a) What is a foreign key (5 marks)
+
+(c) What is the difference between inner join, left join, and right join? (15 marks)
+
+A foreign key is an id in a second table that acts as a reference to the primary key in the first table, it uses a REFERENCES keyword to perform that relationship.
+
+
+In inner join, all the matching  results from the left table  and right tables are joined together, in left join, the query returns all results from the left table and matching results from the right  table, if there are no results returned from the right table, the query will return a null result. In right join, the query returns all results from the right table and matching results from the left table, if there are no results returned from the left table, the query will return a null result.
+6.
+a.)Explain relational database. (5 points)
+
+b) List 5 examples of relational database. (5 points)
+
+(c) List and explain with examples 3 types of relationships in SQL (15 marks).
+
+a) Relational databases are databases that have an ordered collection collection of rows and tables in which tables are linked to one another through primary and foreign keys
+
+b) Mysql
+PostgreSQL
+microsoft sql server
+oracle database
+mariaDB
+
+
+c) One to One Relation: In this relationship,  a table has a relationship with just one other table in the database, for instance, a Man table having only one wife table 
+
+ Many to Many relationships: This is a relationship that involves many multiple tables simultaneously, for instance in a multivendor  e-commerce site, multiple vendors can have multiple customers
+
+Many to one Relationship: A kind of relationship in which many items have a relationship to one item , for instance many cargo ships can be under ONE shipping company
