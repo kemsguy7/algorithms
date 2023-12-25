@@ -57,12 +57,48 @@ indexOf and lastIndefOf returns the index of the items found in the array
 */
 
 /* FINDING AN OBJECT WITH A SPECIFIC CONDITION IN AN ARRAY OF OBJECTS*/
+//still takes 3 args, item, index and array
 let users = [
     {id: 1, name: "John"},
     {id: 2, name: "Pete"},
     {id: 3, name: "Mary"},
-    {id: 4, name: "Ada"},
+    {id: 4, name: "John"},
 ];
 
-let user = users.find(items => item.id == 1);
-alert(user.name)// John 
+//let user = users.find(items => item.id == 1);
+
+//console.log(user.name)// John 
+console.log(users.findIndex(user => user.name == 'John')); 
+
+//find the index of the last John
+console.log(users.findLastIndex(user => user.name == 'John')); 
+
+//USING THE FILTER METHOD
+let someUsers = users.filter(item => item.id < 3);
+console.log(someUsers.length);  
+someUsers.forEach((item) => {
+    console.log(item.name);
+}); 
+
+/* 
+arr.findIndex methods has same syntax but returns the index where the elem was found instead of 
+the elem itself. If the elem wasn't found, it returns a -1
+*/
+
+//filter
+
+
+
+//trasform a array
+/* 
+arr.map is oe of the most useful a ofte used
+it call the function for each element of the array and returns the array of results
+
+Syntax 
+let result = arr.map(function(item, idex, array) {
+     //retur the ew value istead of ite,
+}); */
+
+let lengths = ["ildo", "dsglf", "grgr"].map(item.length);
+alert(length); //5, 7, 6
+
