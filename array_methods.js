@@ -120,12 +120,77 @@ sort_arr.sort(function(a, b) { return a - b; });
 //can also be rewritten as 
 sort_arr.sort( (a,b) => a - b );  //arrow function for cleaner(neater) sorting 
 
-
 //localeCompare can be used to sort strings
 let countries = ['Nigeria', 'Ghana', 'Benin Republic', 'Vietnam', 'Angola'];
 console.log( countries.sort( (a, b) => a.localeCompare(b)) ); //sorting using localCompare
 console.log( countries.sort( (a, b) => a - b) );  ///still works
 
+h 
+//split 
+let names = 'Bilbo, Gandalf, Nazgul';
+let names_arr = names.split(',', 2);
 
+for (let name of names_arr) {
+    console.log( `A message to ${name}. `);
+}
 
+/* split can also have an optional second numeric argument that limits the number of the array length 
+
+*/
+let str = "test";
+console.log( str.split('') ) // t,e,s,t
  
+
+
+//REDUCE METHOD
+/* when we need to iterate over an array, we use forEach, for e.t.c
+
+map is used to iterate and return data for each element
+
+arr.reduce and reduceRight are used to calculate a single value based on the array
+
+syntax
+let value = arr.reduce(function(accumulator, item, index array) {
+
+}, [initial]);
+
+- As function is applied, the result of the previous function call is passed to the next one as first argument
+
+ */
+
+let redArr = [1, 2, 3, 4, 5];
+let result = redArr.reduce((sum, current ) => sum + current,  0);
+
+console.log(result);
+
+//if an array is empty, reduce call will return an error, it is advisable to always include an initial value in an array before calling reduce
+
+
+//MOST METHODS SUPPORT THE thisArg
+/* 
+
+ Almost all array methods that call functions - like find, filter , map , with a notable exception of sort accept an optional additional parameter thisArg
+*/
+
+arr.find(func, thisArg);  //e.t.c for othe array methods mentioned above
+let army = {
+    minAge: 18, 
+    maxAge: 27,
+    canJoin(user) {
+        return user.age >= this.minAge && user.age < this.maxAge;
+    }
+};
+
+let Musers = [
+    {aeg: 16},
+    {age: 20},
+    {age: 23},
+    {age: 30}
+]
+
+//find users, for who army.canJoin returns true
+let soldiers = users.filter(army.canJoin, army);
+
+// the above can be replaced with users.filter(user => army.canJoin(user))
+
+
