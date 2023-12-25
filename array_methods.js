@@ -99,6 +99,33 @@ let result = arr.map(function(item, idex, array) {
      //retur the ew value istead of ite,
 }); */
 
-let lengths = ["ildo", "dsglf", "grgr"].map(item.length);
-alert(length); //5, 7, 6
+let lengths = ["ildo", "dsglf", "grgr"].map(item => item.length);
+console.log(lengths); //5, 7, 6
 
+//sort fuctio /
+
+
+//usig compare fuctio 
+function compareNumeric(a, b) { 
+    if (a > b) return 1;
+    if (a == b) return 0;
+    if (a < b) return -1;
+}
+
+let sort_arr = [1, 15, 2 ];
+sort_arr.sort(compareNumeric);
+console.log(sort_arr);
+
+sort_arr.sort(function(a, b) { return a - b; });
+//can also be rewritten as 
+sort_arr.sort( (a,b) => a - b );  //arrow function for cleaner(neater) sorting 
+
+
+//localeCompare can be used to sort strings
+let countries = ['Nigeria', 'Ghana', 'Benin Republic', 'Vietnam', 'Angola'];
+console.log( countries.sort( (a, b) => a.localeCompare(b)) ); //sorting using localCompare
+console.log( countries.sort( (a, b) => a - b) );  ///still works
+
+
+
+ 
