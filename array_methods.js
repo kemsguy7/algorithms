@@ -125,7 +125,7 @@ let countries = ['Nigeria', 'Ghana', 'Benin Republic', 'Vietnam', 'Angola'];
 console.log( countries.sort( (a, b) => a.localeCompare(b)) ); //sorting using localCompare
 console.log( countries.sort( (a, b) => a - b) );  ///still works
 
-h 
+
 //split 
 let names = 'Bilbo, Gandalf, Nazgul';
 let names_arr = names.split(',', 2);
@@ -192,5 +192,13 @@ let Musers = [
 let soldiers = users.filter(army.canJoin, army);
 
 // the above can be replaced with users.filter(user => army.canJoin(user))
+
+
+//using every to compare arrays
+function arraysEqual(arr1, arr2) {
+    return arr1.length === arr2.length && arr1.every((value, index) => value === arr2[index]);
+ 
+}
+console.log(arraysEqual([1, 2], [1, 2]));  //true
 
 
