@@ -1,0 +1,25 @@
+Task
+Complete the function in your editor.
+
+Your function must merge strings a and b, and then return a single merged string. A merge operation on two strings is described as follows:
+
+Append alternating characters from a and b, respectively, to some new string, mergedString.
+Once all of the characters in one of the strings have been merged, append the remaining characters in the other string to mergedString.
+Specification
+mergeStrings(a, b)
+Parameters
+a: String
+
+b: String
+
+Return Value
+String - The mergedString
+
+Constraints
+1 ≤ |a length|, |b length| ≤ 25000
+
+Examples
+a	b	Return Value
+"abc"	"def"	"adbecf"
+"ab"	"def"	"adbef"
+"abc"	"de"	"adbec"
