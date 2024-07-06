@@ -11,7 +11,6 @@ const squares = nums.map(function(num) {
 
 // console.log(squares)
 
-
 /*
 Challenge 2:
 Given an array of strings, return an array where 
@@ -27,8 +26,6 @@ const capitalized = names.map((name) => {
 
  console.log(capitalized)
 
-
-
  /*
     Challenge 3:
     Given an array of strings, return an array of strings that wraps each
@@ -38,16 +35,16 @@ const capitalized = names.map((name) => {
     return: ["<p>Bulbasaur</p>", "<p>Charmander</p>", "<p>Squirtle</p>"]
 */
 
-
+//solution 1
 const pokemon = ["Bulbasaur", "Charmander", "Squirtle"]
 // -->          ["<p>Bulbasaur</p>", "<p>Charmander</p>", "<p>Squirtle</p>"]
 // Your code here
 
-let wrappedArr = []
-let pur;
+
 const wrappedItems = pokemon.map((items => {
     return   `<p>${items}</p>`
-    // wrappedArr.push(pur);
-    // console.log(wrappedArr);
 }))
 console.log(wrappedItems);
+
+// solution 2: more concised arrow functions
+//const wrappedItems2 = pokemon.map( item => `</p>${item}</p>`);
